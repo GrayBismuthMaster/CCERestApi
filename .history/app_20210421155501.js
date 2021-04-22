@@ -2,21 +2,14 @@ const express = require('express');
 const app = express(); //Instancia d
 const conectarDB = require('./config/db')
 const preguntas = require('./routes/preguntas')
-const preguntas2018 = require('./routes/preguntas2018')
-const preguntas2020 = require('./routes/preguntas2020')
+const pregutn
 const motivoNoCompra = require('./routes/motivoNoCompra')
 const obtenerFrecuenciaUsoInternet=require('./routes/frecuenciaUsoInternet')
-const obtenerFrecuenciaUsoInternet2018=require('./routes/frecuenciaUsoInternet2018')
-const obtenerFrecuenciaUsoInternet2020=require('./routes/frecuenciaUsoInternet2020')
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))//Middleware
 app.use('/api/preguntas',preguntas);
-app.use('/api/preguntas2018',preguntas2018);
-app.use('/api/preguntas2020',preguntas2020);
 app.use('/api/motivoNoCompra',motivoNoCompra);
 app.use('/api/frecuenciaUsoInternet',obtenerFrecuenciaUsoInternet)
-app.use('/api/frecuenciaUsoInternet2018',obtenerFrecuenciaUsoInternet2018)
-app.use('/api/frecuenciaUsoInternet2020',obtenerFrecuenciaUsoInternet2020)
 //Conectar a la base de datos
 conectarDB();    
 app.listen({port:process.env.PORT||5000},()=>{
