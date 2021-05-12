@@ -9,7 +9,7 @@ const obtenerFrecuenciaUsoInternet=require('./routes/frecuenciaUsoInternet')
 const obtenerFrecuenciaUsoInternet2018=require('./routes/frecuenciaUsoInternet2018')
 const obtenerFrecuenciaUsoInternet2020=require('./routes/frecuenciaUsoInternet2020')
 const cors = require('cors')
-app.use(cors())
+app.use(cors)
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))//Middleware
 app.use('/api/preguntas',preguntas);

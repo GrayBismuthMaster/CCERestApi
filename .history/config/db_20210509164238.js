@@ -6,12 +6,13 @@ const conectarDB = async() => {
             useUnifiedTopology:true, 
             useNewUrlParser:true,
             useFindAndModify:false,
-            useCreateIndex: true
+            useCreateIndex: true,
+            keepAlive: true, 
+            serverSelectionTimeoutMS: 10000
         }).then(
             () => { /** ready to use. The `mongoose.connect()` promise resolves to mongoose instance. */ },
             err => { /** handle initial connection error */  console.log(err)}
-          );;
-        
+          );
         console.log('DB Conectada')
     } catch (error) {
         console.log('Hubo un error al conectar a la base de datos')
