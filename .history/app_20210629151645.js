@@ -38,7 +38,7 @@ app.use('/api/compraNoCompra2018',compraNoCompra2018);
 app.use('/api/compraNoCompra2020',compraNoCompra2020);
 app.use('/api/motivacionCompra',motivacionCompra);
 app.use('/api/motivacionCompra2018',motivacionCompra2018);
-app.use('/api/motivacionCompra2020',motivacionCompra2020);
+app.use('/api/motivacionCompra2018',motivacionCompra2018);
 
 //Conectar a la base de datos
 conectarDB();    

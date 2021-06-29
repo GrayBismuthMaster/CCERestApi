@@ -11,11 +11,6 @@ const motivoNoCompra = require('./routes/motivoNoCompra')
 const motivoNoCompra2018 = require('./routes/motivoNoCompra2018')
 const motivoNoCompra2020 = require('./routes/motivoNoCompra2020')
 const compraNoCompra = require('./routes/compraNoCompra')
-const compraNoCompra2018 = require('./routes/compraNoCompra2018')
-const compraNoCompra2020 = require('./routes/compraNoCompra2020')
-const motivacionCompra = require('./routes/motivacionCompra')
-const motivacionCompra2018 = require('./routes/motivacionCompra2018')
-const motivacionCompra2020 = require('./routes/motivacionCompra2020')
 
 
 const cors = require('cors')
@@ -27,19 +22,12 @@ app.use(express.urlencoded({extended:true}))//Middleware
 app.use('/api/preguntas',preguntas);
 app.use('/api/preguntas2018',preguntas2018);
 app.use('/api/preguntas2020',preguntas2020);
-app.use('/api/frecuenciaUsoInternet',FrecuenciaUsoInternet)
-app.use('/api/frecuenciaUsoInternet2018',FrecuenciaUsoInternet2018)
-app.use('/api/frecuenciaUsoInternet2020',FrecuenciaUsoInternet2020)
 app.use('/api/motivoNoCompra',motivoNoCompra);
 app.use('/api/motivoNoCompra2018',motivoNoCompra2018);
 app.use('/api/motivoNoCompra2020',motivoNoCompra2020);
-app.use('/api/compraNoCompra',compraNoCompra);
-app.use('/api/compraNoCompra2018',compraNoCompra2018);
-app.use('/api/compraNoCompra2020',compraNoCompra2020);
-app.use('/api/motivacionCompra',motivacionCompra);
-app.use('/api/motivacionCompra2018',motivacionCompra2018);
-app.use('/api/motivacionCompra2020',motivacionCompra2020);
-
+app.use('/api/frecuenciaUsoInternet',FrecuenciaUsoInternet)
+app.use('/api/frecuenciaUsoInternet2018',FrecuenciaUsoInternet2018)
+app.use('/api/frecuenciaUsoInternet2020',FrecuenciaUsoInternet2020)
 //Conectar a la base de datos
 conectarDB();    
 app.listen({port:process.env.PORT||5000},()=>{

@@ -2,7 +2,7 @@ const express = require('express');
 const Datos2018 = require('../models/Datos2018');
 const ruta = express.Router();
 ruta.get('/',(req,res)=>{
-    let resultado = obtenerMotivoNoCompra2018();
+    let resultado = obtenerMotivoNoCompra2020();
     resultado.then(motivo2018 =>{
         res.json(motivo2018)
     }).catch(err => {

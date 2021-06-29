@@ -1,19 +1,19 @@
 const express = require('express');
-const Datos2018 = require('../models/Datos2018');
+const Datos2018 = require('../models/Datos2020');
 const ruta = express.Router();
 ruta.get('/',(req,res)=>{
-    let resultado = obtenerMotivoNoCompra2018();
-    resultado.then(motivo2018 =>{
-        res.json(motivo2018)
+    let resultado = obtenerMotivoNoCompra2020();
+    resultado.then(motivo2020 =>{
+        res.json(motivo2020)
     }).catch(err => {
         res.status(400).json({
             error:err
         })
     })
 })
-const obtenerMotivoNoCompra2018= async() => {
+const obtenerMotivoNoCompra2020= async() => {
     try {
-        const motivoNoCompraPrefieroVer2018 = await Datos2018.aggregate([
+        const motivoNoCompraPrefieroVer2020 = await Datos2018.aggregate([
             {$match: {"P11A_A1_Prefiero_ver_lo_que_compro": 1}},
             {$group: {_id: null, count:{$sum:1}}}
         ])

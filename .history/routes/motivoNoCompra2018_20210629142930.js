@@ -26,7 +26,7 @@ const obtenerMotivoNoCompra2018= async() => {
             {$group: {_id: null, count:{$sum:1}}}
         ])
         const motivoNoCompraMiedoSerEstafadoEnganiado2018 = await Datos2018.aggregate([
-            {$match: {"P11A_A4_Miedo_a_ser_estafado_enganiado" : 1}},
+            {$match: {P10_A_Total_Miedo_Ser_Estafado_Enganiado : 0}},
             {$group: {_id: null, count:{$sum:1}}}
         ])
         const motivoTotal = {

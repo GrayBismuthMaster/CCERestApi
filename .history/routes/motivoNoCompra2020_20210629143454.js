@@ -1,10 +1,10 @@
 const express = require('express');
-const Datos2018 = require('../models/Datos2018');
+const Datos2018 = require('../models/Datos2020');
 const ruta = express.Router();
 ruta.get('/',(req,res)=>{
-    let resultado = obtenerMotivoNoCompra2018();
-    resultado.then(motivo2018 =>{
-        res.json(motivo2018)
+    let resultado = obtenerMotivoNoCompra2020();
+    resultado.then(motivo2020 =>{
+        res.json(motivo2020)
     }).catch(err => {
         res.status(400).json({
             error:err
