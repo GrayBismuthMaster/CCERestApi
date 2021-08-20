@@ -24,21 +24,21 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))//Middleware
 
 
-app.use('/api/preguntas2017',preguntas);
+app.use('/api/preguntas',preguntas);
 app.use('/api/preguntas2018',preguntas2018);
 app.use('/api/preguntas2020',preguntas2020);
-app.use('/api/preguntas2017/frecuenciaUsoInternet',FrecuenciaUsoInternet)
-app.use('/api/preguntas2018/frecuenciaUsoInternet',FrecuenciaUsoInternet2018)
-app.use('/api/preguntas2020/frecuenciaUsoInternet',FrecuenciaUsoInternet2020)
-app.use('/api/preguntas2017/motivoNoCompra',motivoNoCompra);
-app.use('/api/preguntas2018/motivoNoCompra',motivoNoCompra2018);
-app.use('/api/preguntas2020/motivoNoCompra',motivoNoCompra2020);
-app.use('/api/preguntas2017/compraNoCompra',compraNoCompra);
-app.use('/api/preguntas2018/compraNoCompra',compraNoCompra2018);
-app.use('/api/preguntas2020/compraNoCompra',compraNoCompra2020);
-app.use('/api/preguntas2017/motivacionCompra',motivacionCompra);
-app.use('/api/preguntas2018/motivacionCompra',motivacionCompra2018);
-app.use('/api/preguntas2020/motivacionCompra',motivacionCompra2020);
+app.use('/api/preguntas/frecuenciaUsoInternet',FrecuenciaUsoInternet)
+app.use('/api/preguntas2018/frecuenciaUsoInternet2018',FrecuenciaUsoInternet2018)
+app.use('/api/preguntas2020/frecuenciaUsoInternet2020',FrecuenciaUsoInternet2020)
+app.use('/api/preguntas/motivoNoCompra',motivoNoCompra);
+app.use('/api/preguntasmotivoNoCompra2018',motivoNoCompra2018);
+app.use('/api/motivoNoCompra2020',motivoNoCompra2020);
+app.use('/api/compraNoCompra',compraNoCompra);
+app.use('/api/compraNoCompra2018',compraNoCompra2018);
+app.use('/api/compraNoCompra2020',compraNoCompra2020);
+app.use('/api/motivacionCompra',motivacionCompra);
+app.use('/api/motivacionCompra2018',motivacionCompra2018);
+app.use('/api/motivacionCompra2020',motivacionCompra2020);
 
 //Conectar a la base de datos
 conectarDB();    

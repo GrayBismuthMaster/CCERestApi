@@ -36,7 +36,7 @@ app.use('/api/preguntas2020/motivoNoCompra',motivoNoCompra2020);
 app.use('/api/preguntas2017/compraNoCompra',compraNoCompra);
 app.use('/api/preguntas2018/compraNoCompra',compraNoCompra2018);
 app.use('/api/preguntas2020/compraNoCompra',compraNoCompra2020);
-app.use('/api/preguntas2017/motivacionCompra',motivacionCompra);
+app.use('/api/preguntas/motivacionCompra',motivacionCompra);
 app.use('/api/preguntas2018/motivacionCompra',motivacionCompra2018);
 app.use('/api/preguntas2020/motivacionCompra',motivacionCompra2020);
 

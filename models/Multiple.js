@@ -11,6 +11,7 @@ const MultipleSchema = mongoose.Schema({
     },
     P2_1_Edad_Rangos: {
         type:Number
+        
     },
     P3_Genero: {
         type:Number
