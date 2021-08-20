@@ -1,7 +1,5 @@
 const express = require('express');
 const Multiple = require('../models/Multiple');
-const Datos2018 = require('../models/Datos2018')
-const Datos2020 = require('../models/Datos2020')
 const ruta = express.Router();
 ruta.get('/',(req,res)=>{
     let resultado = listarPreguntas();
@@ -15,17 +13,10 @@ ruta.get('/',(req,res)=>{
 })
 const listarPreguntas = async ()=>{
     let preguntas = await Multiple.find({});
+    let preguntasTotal =await 
     return preguntas;
 }
-const listarPreguntas2018 = async() => {
-    let preguntas2018 = await Datos2018.find({});
-    return preguntas2018;
-}
 
-const listarPreguntas2020 = async() => {
-    let preguntas2020 = await Datos2020.find({});
-    return preguntas2018;
-}
 /*
 ruta.post('/',(req,res)=>{
     let body = req.body;

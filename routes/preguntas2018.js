@@ -1,6 +1,7 @@
 const express = require('express');
 const Datos2018 = require('../models/Datos2018')
 const ruta = express.Router();
+
 ruta.get('/',(req,res)=>{
     let resultado = listarPreguntas2018();
     resultado.then(preguntas2018 =>{
@@ -11,7 +12,6 @@ ruta.get('/',(req,res)=>{
         })
     })
 })
-
 
 const listarPreguntas2018 = async() => {
     let preguntas2018 = await Datos2018.find({});

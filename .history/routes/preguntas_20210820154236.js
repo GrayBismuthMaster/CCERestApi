@@ -15,9 +15,7 @@ const listarPreguntas = async ()=>{
     let preguntas = await Multiple.find({});
     return preguntas;
 }
-const listarPreguntas2018 = async() => {
-    
-}
+
 /*
 ruta.post('/',(req,res)=>{
     let body = req.body;
