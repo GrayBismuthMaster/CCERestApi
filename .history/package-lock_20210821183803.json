@@ -40,6 +40,7 @@
       "resolved": "https://registry.npmjs.org/@types/mongodb/-/mongodb-3.6.9.tgz",
       "integrity": "sha512-2XSGr/+IOKeFQ5tU9ATcIiIr7bpHqWyOXNGLOOhp0kg2NnfEvoKZF1SZ25j4zvJRqM2WeSUjfWSvymFJ3HBGJQ==",
       "requires": {
+        "@types/bson": "*",
         "@types/node": "*"
       }
     },
@@ -107,6 +108,11 @@
           "integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
         }
       }
+    },
+    "bson": {
+      "version": "1.1.5",
+      "resolved": "https://registry.npmjs.org/bson/-/bson-1.1.5.tgz",
+      "integrity": "sha512-kDuEzldR21lHciPQAIulLs1LZlCXdLziXI6Mb/TDkwXhb//UORJNPXgcRs2CuO4H0DcMkpfT3/ySsP3unoZjBg=="
     },
     "bytes": {
       "version": "3.1.0",
@@ -412,7 +418,7 @@
       "integrity": "sha512-rOZuR0QkodZiM+UbQE5kDsJykBqWi0CL4Ec2i1nrGrUI3KO11r6Fbxskqmq3JK2NH7aW4dcccBuUujAP0ERl5w==",
       "requires": {
         "bl": "^2.2.1",
-    
+        
         "denque": "^1.4.1",
         "require_optional": "^1.0.1",
         "safe-buffer": "^5.1.2",
@@ -425,6 +431,7 @@
       "integrity": "sha512-8T4bT6eCGB7MqCm40oVhnhT/1AyAdwe+y1rYUhdl3ljsks3BpYz8whZgcMkIoh6VoCCjipOXRqZqdk1UByvlYA==",
       "requires": {
         "@types/mongodb": "^3.5.27",
+        "bson": "^1.1.4",
         "kareem": "2.3.2",
         "mongodb": "3.6.3",
         "mongoose-legacy-pluralize": "1.0.2",
