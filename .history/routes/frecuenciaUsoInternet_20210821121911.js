@@ -1,8 +1,5 @@
 const express = require('express');
 const Multiple = require('../models/Multiple');
-
-BSON = require('bson');
-
 const ruta = express.Router();
 
 ruta.get('/',(req,res)=>{

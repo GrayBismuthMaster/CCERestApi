@@ -1,7 +1,7 @@
 const express = require('express');
 const Multiple = require('../models/Multiple');
 
-BSON = require('bson');
+BSON = require('bson').native().BSON;
 
 const ruta = express.Router();
 

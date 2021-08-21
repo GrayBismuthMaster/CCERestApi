@@ -1,8 +1,8 @@
 const express = require('express');
 const Multiple = require('../models/Multiple');
 
-BSON = require('bson');
-
+BSON = require('bson').native().BSON;
+var newBSON = new bson();
 const ruta = express.Router();
 
 ruta.get('/',(req,res)=>{
