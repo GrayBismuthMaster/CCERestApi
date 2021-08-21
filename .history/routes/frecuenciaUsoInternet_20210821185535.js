@@ -44,7 +44,7 @@ const obtenerFrecuenciaUsoInternet= async () => {
             { $match : { P9_Frecuencia_Uso_Internet : 1} },
             { $group: { _id: null, count: { $sum: 1 } } }
         ] ))
-        
+        */
         const frecuenciaTotal = {
             TodosLosDias : frecuenciaTodosLosDias[0].count,
             CadaDosDias : frecuenciaCadaDosDias[0].count,
