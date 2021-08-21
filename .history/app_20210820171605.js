@@ -44,5 +44,5 @@ app.use('/api/preguntas2020/motivacionCompra',motivacionCompra2020);
 conectarDB();    
 app.listen({port:process.env.PORT||5000},()=>{
     console.log(`Escuchando en el puerto`)
-});
+})
   
