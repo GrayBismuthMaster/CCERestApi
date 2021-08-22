@@ -47,7 +47,7 @@ const obtenerFrecuenciaUsoInternet2018 = async () => {
         CadaTresDias : frecuenciaCadaTresDias2018[0].count,
         CadaCuatroDias : frecuenciaCadaCuatroDias2018[0].count,
         CadaCincoDias : frecuenciaCadaCincoDias2018[0].count,
-        //tamanio: tamanioObjeto               
+        tamanio: tamanioObjeto               
     }
     
     return frecuenciaTotal  

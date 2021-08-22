@@ -36,18 +36,18 @@ const obtenerFrecuenciaUsoInternet2020 = async () => {
         { $group: { _id: null, count: { $sum: 1 } } }
     ] )
      //Tamaño del objeto
-     /*const tamanioObjeto = BSON.calculateObjectSize(Multiple.aggregate([
+     const tamanioObjeto = BSON.calculateObjectSize(Multiple.aggregate([
         { $match : { "P9_Frecuencia_Uso_Internet": "1"} },
         { $group: { _id: null, count: { $sum: 1 } } }
     ] ))
-    */
+    
     const frecuenciaTotal = { 
         TodosLosDias : frecuenciaTodosLosDias2020[0].count,
         CadaDosDias : frecuenciaCadaDosDias2020[0].count,
         CadaTresDias : frecuenciaCadaTresDias2020[0].count,
         CadaCuatroDias : frecuenciaCadaCuatroDias2020[0].count,
         CadaCincoDias : frecuenciaCadaCincoDias2020[0].count,
-        //tamanio: tamanioObjeto              
+        tamanio: tamanioObjeto              
     }
     
     return frecuenciaTotal  
